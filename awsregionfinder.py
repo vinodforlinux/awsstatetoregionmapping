@@ -1,7 +1,11 @@
 import json
+import os
 
-# JSON file containing state to AWS region mapping
-mapping_file = "state_regions.json"
+# Get the directory of the script
+script_directory = os.path.dirname(os.path.realpath(__file__))
+
+# Relative path to JSON file containing state to AWS region mapping
+mapping_file = os.path.join(script_directory, "state_regions.json")
 
 while True:
     # Prompt user for state input
